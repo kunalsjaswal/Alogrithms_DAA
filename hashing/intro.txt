@@ -1,0 +1,19 @@
+there are different hashing functions like
+1. division method  - (k mod m)
+2. multiplication method - m(kA mod1)
+3. mid-square method  - spliting the number and adding them. getting center of the result.
+
+above mentioned methods doesn't resolve problem of collision (when 2 or mode keys have same index), so writing code for above is waste of time.
+so, we have 2 techniques to solve collision: 
+1. Open addressing / closed hashing
+    a. linear probing:       h(k,i)= [h'(k) + i]mod m.             where h'(k)=k%m
+    b. quadratic probing:    h(k,i)=[h'(k) + i*c1 + i^2*c2]%m      where c1,c2 != 0.
+    c. double hashing:       h(k,i)=[h'(k) + i*h''(k)]%m           where h''(k)= k%m'    m'=m-1 or m-2  i.e m'<m
+    d. Re-hashing:  we create a new hash table of double size and shift the prev data into new one.  ~ expensive , less used
+
+2. Chaining
+    here we use linked list to store elements at the index. if collision happens then element is added to next of the list.
+
+
+we gonna code above 2 methods: but only for inserting the elements.
+Deleting and searching will happen the same but it will take more time complexity(worst- O(n)) if collision happens.

@@ -7,19 +7,19 @@ using namespace std;
 
 const int size=6;
 int f=INT_MAX;
-int graph[size][size]={ {f,2,4,f,f,f},
-                        {f,f,1,7,f,f},
-                        {f,f,f,f,3,f},
-                        {f,f,f,f,f,1},
-                        {f,f,f,2,f,5},
-                        {f,f,f,f,f,f} };
+// int graph[size][size]={ {f,2,4,f,f,f},
+//                         {f,f,1,7,f,f},
+//                         {f,f,f,f,3,f},
+//                         {f,f,f,f,f,1},
+//                         {f,f,f,2,f,5},
+//                         {f,f,f,f,f,f} };
 
-// int graph[size][size]={{f,50,45,10,f,f},
-//                         {f,f,10,15,f,f},
-//                         {f,f,f,f,30,f},
-//                         {f,f,f,f,15,f},
-//                         {f,20,35,f,f,f},
-//                         {f,f,f,f,3,f}};
+int graph[size][size]={ {f,50,45,10,f,f},
+                        {f,f,10,15,f,f},
+                        {f,f,f,f,30,f},
+                        {f,f,f,f,15,f},
+                        {f,20,35,f,f,f},
+                        {f,f,f,f,3,f}};
 
 vector<vector<int>> result;
 int included[size]={0};

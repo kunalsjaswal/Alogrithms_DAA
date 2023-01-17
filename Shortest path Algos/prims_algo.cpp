@@ -8,12 +8,12 @@ int cost=0;
 const int size=9;
 
 int Graph2[size][size]={{f,25,f,f,f,5,f},
-                {25,f,12,f,f,f,10},
-                {f,12,f,8,f,f,f},
-                {f,f,8,f,16,f,14},
-                {f,f,f,16,f,20,18},
-                {5,f,f,f,20,f,f},
-                {f,10,f,14,18,f,f}};
+                        {25,f,12,f,f,f,10},
+                        {f,12,f,8,f,f,f},
+                        {f,f,8,f,16,f,14},
+                        {f,f,f,16,f,20,18},
+                        {5,f,f,f,20,f,f},
+                        {f,10,f,14,18,f,f}};
 
 int Graph[size][size]={{f,4,f,f,f,f,8,f,f},
                         {4,f,8,f,f,f,f,11,f},
@@ -48,6 +48,8 @@ void find_shortest_edge(){
 
 
 void find_spanning_tree(){
+
+    // updating near array 
     for(int i=0;i<size;i++){
         if(near[i]!=-1){
             if(Graph[span_tree[0][0]][i]<=Graph[span_tree[0][1]][i]){
@@ -58,7 +60,7 @@ void find_spanning_tree(){
         }
     }
 
-    while(span_tree.size()!=8){
+    while(span_tree.size()!=size-1){
         int s=0;
         int e=0;
 

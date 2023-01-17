@@ -54,17 +54,18 @@ void merge(int beg,int mid,int end){
 
     for(int i=beg;i<index;i++){
         arr[i]=temp[i];
-    }
+    
 
     cout<<"After merging: ";
      for(int i=beg;i<=end;i++){
         cout<<arr[i]<<" ";
     }
     cout<<endl;
-
+    }
 }
 
 void merge_sort(int beg,int end){
+
     if(beg<end){
         int mid=(beg+end)/2;
         merge_sort(beg,mid);

@@ -10,7 +10,7 @@ int edges[3][9]{
 };
 const int size=8;
 int set[size]={0,-1,-1,-1,-1,-1,-1,-1};
-int included[size]={0};
+int included[size];
 vector<vector<int>> result;
 int min_cost=0;
 
@@ -58,8 +58,8 @@ void kruskal(){
         int p1=find_parent(edge1);
         int p2=find_parent(edge2);
 
-
-        if(p1!=p2 || (p1<0 && p2<0) ){
+        // dont have similar parents - (p1!=p2)
+        if(p1!=p2 ){
             // no cycle condition
             result.push_back({edge1,edge2});
             included[min_index]=1;

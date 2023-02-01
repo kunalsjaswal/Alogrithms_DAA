@@ -3,12 +3,13 @@
 #include<iostream>
 using namespace std;
 
-const int size=4;
-bool A[size][size]= {{0,0,0,1},
-                    {1,0,1,1},
-                    {1,0,0,1},
-                    {0,0,1,0}};
-
+const int size=6;
+bool A[size][size]{{0,1,0,0,0,0},
+                        {0,0,1,0,0,0},
+                        {0,0,0,0,1,0},
+                        {0,1,0,0,0,0},
+                        {0,0,0,1,0,1},
+                        {0,0,0,0,0,0}};
 void warshall(){
     for(int k=0;k<size;k++){
         for(int i=0;i<size;i++){

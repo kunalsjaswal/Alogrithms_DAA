@@ -107,7 +107,7 @@ void dijkstra(int start){
 }
  
 int main(){
-    int start=5;
+    int start=4;
     
     //upadting result_set i.e calculating and storing distance from start vertex to every other vertex in graph
     starting_result(start);
